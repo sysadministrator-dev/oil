@@ -65,7 +65,7 @@ const translations: Translations = {
       tag: 'AI Texnologiyaları',
       title: 'İntellektual\nyağ seçimi',
       desc: 'Bizim AI-assistentimiz mühərrikin ideal qorunma formulunu seçmək üçün avtomobilinizin texniki xüsusiyyətlərini və istismar şəraitini təhlil edəcək.',
-      check1: 'İstehsalçı icazələrini nəzərə alır',
+      check1: 'İstehsalçı icazələrini nəзərə alır',
       check2: 'Sürücülük tərzi və iqlimi təhlil edir',
       check3: 'Seçimin ətraflı əsaslandırılmasını verir',
       cardTitle: 'Avtomobil parametrləri',
@@ -87,7 +87,7 @@ const translations: Translations = {
     about: {
       tag: 'Şirkət haqqında',
       title: 'Avtokimya dünyasında\nsizin etibarlı tərəfdaşınız',
-      desc1: 'MasloGuru sadəcə bir mağaza deyil, öz işinə sadiq peşəkarlar komandasıdır. Biz inanırıq ki, avtomobilin düzgün saxlanılması keyfiyyətli sərfiyyat materiallarından başlayır.',
+      desc1: 'MasloGuru sadəcə bir mağaza deyil, öz işinə sadiq peшəkarlar komandasıdır. Biz inanırıq ki, avtomobilin düzgün saxlanılması keyfiyyətli sərfiyyat materiallarından başlayır.',
       desc2: 'Missiyamız avtomobil sahiblərinə orijinal və yüksək keyfiyyətli mühərrik yağlarına çıxış təmin etmək, saxtakarlıq riskini aradan qaldırmaq və hər bir mühərrikin uzun ömürlü olmasını təmin etməkdir.',
       stats: {
         s1: '10+ il bazarda',
@@ -149,8 +149,16 @@ const translations: Translations = {
         '1': {
           name: 'Mobil 1 ESP 5W-30',
           type: 'Pure Synthetic Lubricant',
-          desc: 'Вершина синтетических технологий. Создано для тех, кто не приемлет компромиссов в вопросах защиты двигателя.',
-          benefits: ['Нано-защита поверхностей', 'Стабильность при +150°C', 'Ресурс до 20,000 км'],
+          desc: 'синтетическое моторное масло с улучшенными рабочими свойствами, разработанное для обеспечения исключительного уровня чистоты двигателя, общих эксплуатационных характеристик и защиты от износа. Масло Mobil 1 ESP 5W-30 было разработано экспертами компании для продления срока службы и поддержания эффективности систем снижения токсичности выхлопных газов дизельных и бензиновых автомобилей. Масло Mobil 1 ESP 5W-30 соответствует требованиям многих отраслевых стандартов и передовых автопроизводителей, которые предъявляются к современным дизельным и бензиновым легковым автомобилям, или превосходит такие требования.',
+          benefits: [
+            'Помогает снизить отложение частиц в сажевых фильтрах дизельных двигателей',
+            'Помогает снизить «отравление» каталитических нейтрализаторов бензиновых двигателей',
+            'Снижает образование отложений и шлама, что обеспечивает длительный срок службы и чистоту двигателя',
+            'Помогает замедлить процесс старения масла, обеспечивая защиту двигателя при увеличенном интервале замены масла',
+            'Снижение загрязнения окружающей среды углеводородами',
+            'Способствует экономии топлива',
+            'Быстрый запуск и моментальная защита при пуске в холодную погоду помогают продлить срок службы двигателя'
+          ],
         },
         '2': {
           name: 'ARCTIC FLOW',
