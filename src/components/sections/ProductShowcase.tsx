@@ -99,7 +99,7 @@ export const ProductShowcase = () => {
                         <div className="space-y-6">
                           <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-950">{t('products.specs')}</h4>
                           <ul className="grid grid-cols-1 gap-4 pb-8">
-                            {product.benefits.map((benefit: string, i: number) => (
+                            {product.benefits && Array.isArray(product.benefits) && product.benefits.map((benefit: string, i: number) => (
                               <li key={i} className="flex items-start gap-4 text-sm font-bold text-slate-600">
                                 <div className="w-1.5 h-1.5 rounded-full bg-slate-950 mt-1.5 shrink-0" />
                                 <span>{benefit}</span>
