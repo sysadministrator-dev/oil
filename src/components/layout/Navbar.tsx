@@ -11,9 +11,15 @@ import { cn } from '@/lib/utils';
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
 
   React.useEffect(() => {
     setMounted(true);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
@@ -24,7 +30,10 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent py-4">
+    <nav className={cn(
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+      isScrolled ? "glass-effect py-2" : "bg-transparent py-4"
+    )}>
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group shrink-0">
@@ -49,8 +58,8 @@ export const Navbar = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center shrink-0">
-          <Button variant="default" className="bg-primary hover:bg-primary/80" asChild>
-            <Link href="#contact">Заказать звонок</Link>
+          <Button variant="outline" className="border-accent text-accent hover:bg-accent/10" asChild>
+            <Link href="#contact">Консультация</Link>
           </Button>
         </div>
 
