@@ -24,18 +24,18 @@ export const AboutUs = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-1/2 relative">
-            <div className="relative h-[500px] w-full rounded-3xl overflow-hidden border border-slate-100 shadow-2xl">
+            <div className="relative h-[500px] w-full rounded-3xl overflow-hidden border border-slate-100 shadow-2xl group">
               {teamImage && (
                 <Image
                   src={teamImage.imageUrl}
                   alt={teamImage.description}
                   fill
-                  className="object-cover grayscale"
+                  className="object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
                   data-ai-hint={teamImage.imageHint}
                 />
               )}
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-slate-950 p-8 rounded-3xl hidden md:block max-w-[240px] shadow-2xl">
+            <div className="absolute -bottom-8 -right-8 bg-slate-950 p-8 rounded-3xl hidden md:block max-w-[240px] shadow-2xl z-10">
               <p className="text-white font-black text-2xl mb-1">99.8%</p>
               <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">{t('about.feedback')}</p>
             </div>
