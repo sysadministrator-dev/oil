@@ -3,8 +3,10 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Plus } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
@@ -114,6 +116,14 @@ export const ProductShowcase = () => {
               </Dialog>
             );
           })}
+        </div>
+
+        <div className="mt-32 flex justify-center">
+          <Link href="/catalog">
+            <Button variant="outline" className="border-slate-950 text-slate-950 hover:bg-slate-950 hover:text-white px-12 h-16 rounded-full font-black uppercase tracking-[0.2em] text-[11px] transition-all duration-700 shadow-xl hover:shadow-2xl hover:-translate-y-1">
+              {t('products.viewAll')}
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

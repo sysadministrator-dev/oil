@@ -34,6 +34,8 @@ const translations: Translations = {
       desc: 'Sıramızdakı hər bir məhsul çoxillik tədqiqatların və mütləq kamillik axtarışının nəticəsidir.',
       specs: 'Seriya xüsusiyyətləri',
       more: 'Ətraflı',
+      viewAll: 'Hamısına bax',
+      catalogTitle: 'Tam Kataloq',
       items: {
         '1': {
           name: 'Mobil 1 ESP 5W-30',
@@ -58,7 +60,7 @@ const translations: Translations = {
             'Çöküntülərin yaranmasını qarшısını alır, mühərrikin akselerator pedalına reaksiya sürətini artırmağa kömək edir',
             'Hətta yüksək yüklər şəraitində mühərrikin maksimum gücünü saxlayır',
             'Mühərrikin FİƏ-ni artırır (müstəqil sınaqlarla təsdiqlənib)',
-            'Müxtəlif hərəkət şəraitində və geniş temperatur diapazonunda detalların misilsiz qorunmasını təmin edir'
+            'Mühərrikin müxtəlif hərəkət şəraitində və geniş temperatur diapazonunda detalların misilsiz qorunmasını təmin edir'
           ],
         },
         '3': {
@@ -84,29 +86,6 @@ const translations: Translations = {
           ],
         },
       }
-    },
-    selector: {
-      tag: 'AI Texnologiyaları',
-      title: 'İntellektual\nyağ seçimi',
-      desc: 'Bizim AI-assistentimiz mühərrikin ideal qorunma formulunu seçmək üçün avtomobilinizin texniki xüsusiyyətlərini və istismar şəraitini təhlil edəcək.',
-      check1: 'İstehsalçı icazələrini nəзərə alır',
-      check2: 'Sürücülük tərzi və iqlimi təhlil edir',
-      check3: 'Seçimin ətraflı əsaslandırılmasını verir',
-      cardTitle: 'Avtomobil parametrləri',
-      cardDesc: 'Tövsiyə almaq üçün formanı doldurun',
-      make: 'Marka',
-      model: 'Model',
-      year: 'Buraxılış ili',
-      conditions: 'Sürücülük şəraiti',
-      btn: 'Yağ seçmək',
-      analyzing: 'Təhlil edilir...',
-      resultTitle: 'AI Tövsiyəsi',
-      resultDesc: 'Avtomobiliniz üçün optimal seçim',
-      reasoning: 'Əsaslandırma',
-      specs: 'Spesifikasiyalar',
-      notes: 'Əlavə',
-      catalogBtn: 'Kataloqda tapmaq',
-      error: 'Yağ seçimində xəta baş verdi. Zəhmət olmasa, sonra yenidən cəhd edin.',
     },
     about: {
       tag: 'Şirkət haqqında',
@@ -169,6 +148,8 @@ const translations: Translations = {
       desc: 'Каждый продукт в нашей линейке — это результат многолетних исследований и стремления к абсолютному совершенству.',
       specs: 'Характеристики серии',
       more: 'Подробнее',
+      viewAll: 'Посмотреть всё',
+      catalogTitle: 'Полный Каталог',
       items: {
         '1': {
           name: 'Mobil 1 ESP 5W-30',
@@ -215,33 +196,10 @@ const translations: Translations = {
           desc: 'Синтетическое маловязкое моторное масло для тяжёлых условий работы, для легковых автомобилей. Синтетические компоненты и адаптированный к ним комплекс новейших присадок обеспечивают соблюдение текущих практических требований. Существенно улучшенное качество моторных масел Alpine RSL 5W-30 GM, обусловлено дальнейшим совершенствованием защиты от износа и повышением чистоты двигателя. За счёт низкой вязкости в холодных условиях и надлежащей вязкости при высокой температуре обеспечивается высокий потенциал экономии топлива.',
           benefits: [
             'Alpine RSL 5W-30 GM высокопроизводительное моторное масло для требовательных двигателей.',
-            'Рекомендуется для бензиновых и дизельных двигателей легковых автомобилей, в т.ч. с турбонаддувом и прямым впрыском, при любых рабочих условиях.'
+            'Рекомендуется для бензиновых и дизельных двигателей легковых автомобилей, в т.ц. с турбонаддувом и прямым впрыском, при любых рабочих условиях.'
           ],
         },
       }
-    },
-    selector: {
-      tag: 'AI Технологии',
-      title: 'Интеллектуальный\nподбор масла',
-      desc: 'Наш AI-ассистент проанализирует технические характеристики вашего автомобиля и условия эксплуатации, чтобы подобрать идеальную формулу защиты двигателя.',
-      check1: 'Учитывает допуски производителя',
-      check2: 'Анализирует стиль вождения и климат',
-      check3: 'Дает подробное обоснование выбора',
-      cardTitle: 'Параметры автомобиля',
-      cardDesc: 'Заполните форму для получения рекомендации',
-      make: 'Марка',
-      model: 'Модель',
-      year: 'Год выпуска',
-      conditions: 'Условия вождения',
-      btn: 'Подобрать масло',
-      analyzing: 'Анализируем...',
-      resultTitle: 'Рекомендация AI',
-      resultDesc: 'Оптимальный выбор для вашего автомобиля',
-      reasoning: 'Обоснование',
-      specs: 'Спецификации',
-      notes: 'Дополнительно',
-      catalogBtn: 'Найти подходящее в каталоге',
-      error: 'Произошла ошибка при подборе масла. Пожалуйста, попробуйте позже.',
     },
     about: {
       tag: 'О компании',
@@ -304,6 +262,8 @@ const translations: Translations = {
       desc: 'Every product in our lineup is the result of years of research and a pursuit of absolute perfection.',
       specs: 'Series Specifications',
       more: 'Details',
+      viewAll: 'View All',
+      catalogTitle: 'Full Catalog',
       items: {
         '1': {
           name: 'Mobil 1 ESP 5W-30',
@@ -354,29 +314,6 @@ const translations: Translations = {
           ],
         },
       }
-    },
-    selector: {
-      tag: 'AI Technologies',
-      title: 'Intelligent\nOil Selection',
-      desc: 'Our AI assistant will analyze your vehicle\'s technical characteristics and operating conditions to pick the ideal engine protection formula.',
-      check1: 'Considers manufacturer approvals',
-      check2: 'Analyzes driving style and climate',
-      check3: 'Provides detailed reasoning for the choice',
-      cardTitle: 'Vehicle Parameters',
-      cardDesc: 'Fill out the form to get a recommendation',
-      make: 'Make',
-      model: 'Model',
-      year: 'Year of Manufacture',
-      conditions: 'Driving Conditions',
-      btn: 'Select Oil',
-      analyzing: 'Analyzing...',
-      resultTitle: 'AI Recommendation',
-      resultDesc: 'Optimal choice for your vehicle',
-      reasoning: 'Reasoning',
-      specs: 'Specifications',
-      notes: 'Notes',
-      catalogBtn: 'Find in Catalog',
-      error: 'An error occurred during oil selection. Please try again later.',
     },
     about: {
       tag: 'About Us',
