@@ -34,24 +34,24 @@ export const ProductShowcase = ({ hideViewAll = false }: ProductShowcaseProps) =
 
   return (
     <section id="products" className="py-20 bg-white">
-      <div className="container mx-auto px-10">
+      <div className="container mx-auto px-6 md:px-10">
         {!hideViewAll && (
-          <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-10">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-32 gap-8 md:gap-10">
             <div className="max-w-2xl">
-              <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-6 block">{t('products.tag')}</span>
-              <h2 className="text-5xl md:text-8xl font-black text-slate-950 tracking-tighter leading-[0.9] whitespace-pre-line">
+              <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-4 md:mb-6 block">{t('products.tag')}</span>
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-slate-950 tracking-tighter leading-[0.9] whitespace-pre-line">
                 {t('products.title')}
               </h2>
             </div>
-            <div className="pb-4">
-               <p className="text-slate-400 font-medium max-w-sm text-right leading-relaxed">
+            <div className="md:pb-4 w-full md:w-auto">
+               <p className="text-slate-400 font-medium max-w-sm text-left md:text-right leading-relaxed text-sm md:text-base">
                 {t('products.desc')}
               </p>
             </div>
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {productIds.map((item) => {
             const product = t(`products.items.${item.id}`);
             const imageData = PlaceHolderImages.find(img => img.id === item.imageId);
@@ -59,7 +59,7 @@ export const ProductShowcase = ({ hideViewAll = false }: ProductShowcaseProps) =
               <Dialog key={item.id}>
                 <DialogTrigger asChild>
                   <div className="group cursor-pointer">
-                    <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-slate-50 mb-8">
+                    <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-slate-50 mb-6 md:mb-8">
                       {imageData && (
                         <Image
                           src={imageData.imageUrl}
@@ -69,23 +69,23 @@ export const ProductShowcase = ({ hideViewAll = false }: ProductShowcaseProps) =
                         />
                       )}
                       <div className="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/20 transition-all duration-700 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all duration-700 shadow-2xl">
-                          <Plus className="w-6 h-6 text-slate-950" />
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all duration-700 shadow-2xl">
+                          <Plus className="w-5 h-5 md:w-6 md:h-6 text-slate-950" />
                         </div>
                       </div>
                     </div>
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-center">
-                        <h3 className="text-2xl font-black text-slate-950 tracking-tighter">{product.name}</h3>
-                        <span className="text-[10px] font-bold text-slate-400 tracking-widest">{item.spec}</span>
+                    <div className="space-y-2 md:space-y-3">
+                      <div className="flex justify-between items-center gap-2">
+                        <h3 className="text-xl md:text-2xl font-black text-slate-950 tracking-tighter truncate">{product.name}</h3>
+                        <span className="text-[9px] md:text-[10px] font-bold text-slate-400 tracking-widest shrink-0">{item.spec}</span>
                       </div>
-                      <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">{product.type}</p>
+                      <p className="text-[9px] md:text-[10px] font-black text-slate-300 uppercase tracking-widest">{product.type}</p>
                     </div>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="bg-white border-none max-w-6xl p-0 overflow-hidden rounded-[2rem] shadow-2xl max-h-[90vh]">
-                  <div className="flex flex-col md:flex-row h-full max-h-[90vh]">
-                    <div className="md:w-1/2 relative min-h-[300px] md:min-h-full">
+                <DialogContent className="bg-white border-none max-w-6xl p-0 overflow-hidden rounded-2xl md:rounded-[2rem] shadow-2xl max-h-[95vh] w-[95vw] md:w-full">
+                  <div className="flex flex-col md:flex-row h-full max-h-[95vh]">
+                    <div className="h-[250px] sm:h-[350px] md:h-auto md:w-1/2 relative shrink-0">
                        {imageData && (
                         <Image
                           src={imageData.imageUrl}
@@ -96,19 +96,19 @@ export const ProductShowcase = ({ hideViewAll = false }: ProductShowcaseProps) =
                       )}
                     </div>
                     <ScrollArea className="md:w-1/2 h-full">
-                      <div className="p-8 md:p-16 flex flex-col justify-center space-y-12">
-                        <div className="space-y-6">
-                          <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">{item.spec}</span>
-                          <DialogTitle className="text-4xl md:text-6xl font-black text-slate-950 tracking-tighter">{product.name}</DialogTitle>
-                          <DialogDescription className="text-lg text-slate-500 font-medium leading-relaxed">
+                      <div className="p-6 sm:p-8 md:p-16 flex flex-col justify-center space-y-8 md:space-y-12">
+                        <div className="space-y-4 md:space-y-6">
+                          <span className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">{item.spec}</span>
+                          <DialogTitle className="text-3xl sm:text-4xl md:text-6xl font-black text-slate-950 tracking-tighter">{product.name}</DialogTitle>
+                          <DialogDescription className="text-base md:text-lg text-slate-500 font-medium leading-relaxed">
                             {product.desc}
                           </DialogDescription>
                         </div>
-                        <div className="space-y-6">
-                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-950">{t('products.specs')}</h4>
-                          <ul className="grid grid-cols-1 gap-4 pb-8">
+                        <div className="space-y-4 md:space-y-6">
+                          <h4 className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-slate-950">{t('products.specs')}</h4>
+                          <ul className="grid grid-cols-1 gap-3 md:gap-4 pb-4 md:pb-8">
                             {product.benefits && Array.isArray(product.benefits) && product.benefits.map((benefit: string, i: number) => (
-                              <li key={i} className="flex items-start gap-4 text-sm font-bold text-slate-600">
+                              <li key={i} className="flex items-start gap-3 md:gap-4 text-sm font-bold text-slate-600">
                                 <div className="w-1.5 h-1.5 rounded-full bg-slate-950 mt-1.5 shrink-0" />
                                 <span>{benefit}</span>
                               </li>
@@ -125,9 +125,9 @@ export const ProductShowcase = ({ hideViewAll = false }: ProductShowcaseProps) =
         </div>
 
         {!hideViewAll && (
-          <div className="mt-32 flex justify-center">
-            <Link href="/catalog">
-              <Button variant="outline" className="border-slate-950 text-slate-950 hover:bg-slate-950 hover:text-white px-12 h-16 rounded-full font-black uppercase tracking-[0.2em] text-[11px] transition-all duration-700 shadow-xl hover:shadow-2xl hover:-translate-y-1">
+          <div className="mt-20 md:mt-32 flex justify-center px-4">
+            <Link href="/catalog" className="w-full sm:w-auto">
+              <Button variant="outline" className="w-full sm:w-auto border-slate-950 text-slate-950 hover:bg-slate-950 hover:text-white px-8 md:px-12 h-14 md:h-16 rounded-full font-black uppercase tracking-[0.2em] text-[10px] md:text-[11px] transition-all duration-700 shadow-xl hover:shadow-2xl hover:-translate-y-1">
                 {t('products.viewAll')}
               </Button>
             </Link>
