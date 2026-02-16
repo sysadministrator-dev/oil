@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -26,7 +25,6 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: t('nav.collection'), href: '#products' },
-    { name: t('nav.intelligence'), href: '#selector' },
     { name: t('nav.history'), href: '#about' },
     { name: t('nav.concierge'), href: '#contact' },
   ];
