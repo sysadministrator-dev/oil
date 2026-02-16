@@ -30,25 +30,27 @@ export const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled ? "glass-effect py-2" : "bg-transparent py-4"
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+      isScrolled ? "glass-effect py-4" : "bg-transparent py-8"
     )}>
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group shrink-0">
-          <div className="p-1.5 bg-primary rounded-lg group-hover:bg-accent transition-colors">
-            <Droplets className="w-6 h-6 text-white" />
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="p-2 bg-slate-900 rounded-xl group-hover:scale-110 transition-transform duration-300">
+            <Droplets className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-tight font-headline text-foreground">Масло<span className="text-primary">Гуру</span></span>
+          <span className="text-xl font-extrabold tracking-tight text-slate-900">
+            Масло<span className="text-primary">Гуру</span>
+          </span>
         </Link>
 
         {/* Desktop Nav - Centered */}
-        <div className="hidden md:flex items-center justify-center gap-8 flex-1 px-8">
+        <div className="hidden md:flex items-center justify-center gap-10 flex-1">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               href={link.href} 
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors whitespace-nowrap"
+              className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors tracking-wide uppercase"
             >
               {link.name}
             </Link>
@@ -56,43 +58,39 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center shrink-0">
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
-            <Link href="#contact">Консультация</Link>
+        <div className="hidden md:block">
+          <Button variant="ghost" className="font-bold text-slate-900 hover:bg-slate-100" asChild>
+            <Link href="#contact">+7 (800) 555-35-35</Link>
           </Button>
         </div>
 
         {/* Mobile Nav */}
         <div className="md:hidden">
-          {mounted ? (
+          {mounted && (
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="w-6 h-6" />
+                <Button variant="ghost" size="icon" className="hover:bg-slate-100">
+                  <Menu className="w-6 h-6 text-slate-900" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-background border-border pt-12">
-                <div className="flex flex-col gap-6">
+              <SheetContent side="right" className="bg-white border-none w-full max-w-xs p-10">
+                <div className="flex flex-col gap-8 mt-10">
                   {navLinks.map((link) => (
                     <Link 
                       key={link.name} 
                       href={link.href} 
                       onClick={() => setIsOpen(false)}
-                      className="text-lg font-medium hover:text-primary transition-colors"
+                      className="text-2xl font-bold text-slate-900 hover:text-primary transition-colors"
                     >
                       {link.name}
                     </Link>
                   ))}
-                  <Button className="w-full bg-primary" asChild>
-                    <Link href="#contact" onClick={() => setIsOpen(false)}>Связаться с нами</Link>
+                  <Button className="w-full bg-slate-900 h-14 rounded-2xl" asChild>
+                    <Link href="#contact" onClick={() => setIsOpen(false)}>Связаться</Link>
                   </Button>
                 </div>
               </SheetContent>
             </Sheet>
-          ) : (
-            <Button variant="ghost" size="icon">
-              <Menu className="w-6 h-6" />
-            </Button>
           )}
         </div>
       </div>
