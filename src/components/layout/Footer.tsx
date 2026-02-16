@@ -37,7 +37,7 @@ export const Footer = () => {
               <li><Link href="/" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.home')}</Link></li>
               <li><Link href="/catalog" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.catalog')}</Link></li>
               <li><Link href="/#about" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.history')}</Link></li>
-              <li><Link href="/#contact" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.contacts')}</Link></li>
+              <li><Link href="/contacts" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.contacts')}</Link></li>
             </ul>
           </div>
 

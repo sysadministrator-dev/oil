@@ -28,7 +28,7 @@ export const Navbar = () => {
     { name: t('nav.home'), href: '/' },
     { name: t('nav.catalog'), href: '/catalog' },
     { name: t('nav.history'), href: '/#about' },
-    { name: t('nav.contacts'), href: '/#contact' },
+    { name: t('nav.contacts'), href: '/contacts' },
   ];
 
   if (!mounted) return null;

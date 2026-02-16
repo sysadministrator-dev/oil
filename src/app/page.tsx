@@ -1,10 +1,10 @@
+
 import { Navbar } from '@/components/layout/Navbar';
 import { Hero } from '@/components/sections/Hero';
 import { ProductShowcase } from '@/components/sections/ProductShowcase';
 import { AboutUs } from '@/components/sections/AboutUs';
 import { ContactForm } from '@/components/sections/ContactForm';
 import { Footer } from '@/components/layout/Footer';
-import { Toaster } from '@/components/ui/toaster';
 
 export default function Home() {
   return (
@@ -17,7 +17,6 @@ export default function Home() {
         <ContactForm />
       </main>
       <Footer />
-      <Toaster />
     </div>
   );
 }

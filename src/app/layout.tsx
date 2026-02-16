@@ -2,6 +2,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { LanguageProvider } from '@/context/LanguageContext';
+import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'МаслоГуру | Премиальные моторные масла и AI-подбор',
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className="font-body antialiased">
         <LanguageProvider>
           {children}
+          <Toaster />
         </LanguageProvider>
       </body>
     </html>
