@@ -36,7 +36,7 @@ const translations: Translations = {
       more: 'Ətraflı',
       items: {
         '1': {
-          name: 'ELITE SYNTH',
+          name: 'Mobil 1 ESP 5W-30',
           type: 'Saf Sintetik Sürtkü Yağı',
           desc: 'Sintetik texnologiyaların zirvəsi. Mühərrikin qorunması məsələsində kompromisə yer verməyənlər üçün yaradılmışdır.',
           benefits: ['Səthlərin nano-qoruması', '+150°C-də stabillik', '20,000 km-ə qədər resurs'],
@@ -147,7 +147,7 @@ const translations: Translations = {
       more: 'Подробнее',
       items: {
         '1': {
-          name: 'ELITE SYNTH',
+          name: 'Mobil 1 ESP 5W-30',
           type: 'Pure Synthetic Lubricant',
           desc: 'Вершина синтетических технологий. Создано для тех, кто не приемлет компромиссов в вопросах защиты двигателя.',
           benefits: ['Нано-защита поверхностей', 'Стабильность при +150°C', 'Ресурс до 20,000 км'],
@@ -258,7 +258,7 @@ const translations: Translations = {
       more: 'Details',
       items: {
         '1': {
-          name: 'ELITE SYNTH',
+          name: 'Mobil 1 ESP 5W-30',
           type: 'Pure Synthetic Lubricant',
           desc: 'The pinnacle of synthetic technology. Created for those who accept no compromises in engine protection.',
           benefits: ['Nano-surface protection', 'Stability at +150°C', 'Service life up to 20,000 km'],
