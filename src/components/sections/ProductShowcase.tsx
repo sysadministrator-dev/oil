@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -103,7 +104,7 @@ export const ProductShowcase = () => {
                     <span className="text-2xl font-bold text-foreground">{product.price}</span>
                   </div>
                 </CardContent>
-                <CardFooter className="flex flex-col gap-3">
+                <CardFooter>
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button variant="outline" className="w-full border-primary/50 hover:border-accent">
@@ -142,14 +143,10 @@ export const ProductShowcase = () => {
                               ))}
                             </ul>
                           </div>
-                          <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                            Оформить заказ
-                          </Button>
                         </div>
                       </div>
                     </DialogContent>
                   </Dialog>
-                  <Button className="w-full bg-primary hover:bg-primary/80">Купить сейчас</Button>
                 </CardFooter>
               </Card>
             );
