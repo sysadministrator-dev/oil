@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, Dialog
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Plus } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface Product {
   id: string;
@@ -74,9 +75,9 @@ export const ProductShowcase = () => {
                     </div>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="bg-white border-none max-w-5xl p-0 overflow-hidden rounded-[2rem] shadow-2xl">
-                  <div className="flex flex-col md:flex-row h-full">
-                    <div className="md:w-1/2 relative min-h-[500px]">
+                <DialogContent className="bg-white border-none max-w-6xl p-0 overflow-hidden rounded-[2rem] shadow-2xl max-h-[90vh]">
+                  <div className="flex flex-col md:flex-row h-full max-h-[90vh]">
+                    <div className="md:w-1/2 relative min-h-[300px] md:min-h-full">
                        {imageData && (
                         <Image
                           src={imageData.imageUrl}
@@ -86,26 +87,28 @@ export const ProductShowcase = () => {
                         />
                       )}
                     </div>
-                    <div className="md:w-1/2 p-16 flex flex-col justify-center space-y-12">
-                      <div className="space-y-6">
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">{item.spec}</span>
-                        <DialogTitle className="text-6xl font-black text-slate-950 tracking-tighter">{product.name}</DialogTitle>
-                        <DialogDescription className="text-xl text-slate-500 font-medium leading-relaxed">
-                          {product.desc}
-                        </DialogDescription>
+                    <ScrollArea className="md:w-1/2 h-full">
+                      <div className="p-8 md:p-16 flex flex-col justify-center space-y-12">
+                        <div className="space-y-6">
+                          <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">{item.spec}</span>
+                          <DialogTitle className="text-4xl md:text-6xl font-black text-slate-950 tracking-tighter">{product.name}</DialogTitle>
+                          <DialogDescription className="text-lg text-slate-500 font-medium leading-relaxed">
+                            {product.desc}
+                          </DialogDescription>
+                        </div>
+                        <div className="space-y-6">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-950">{t('products.specs')}</h4>
+                          <ul className="grid grid-cols-1 gap-4 pb-8">
+                            {product.benefits.map((benefit: string, i: number) => (
+                              <li key={i} className="flex items-start gap-4 text-sm font-bold text-slate-600">
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-950 mt-1.5 shrink-0" />
+                                <span>{benefit}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                      <div className="space-y-6">
-                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-950">{t('products.specs')}</h4>
-                        <ul className="grid grid-cols-1 gap-4">
-                          {product.benefits.map((benefit: string, i: number) => (
-                            <li key={i} className="flex items-center gap-4 text-sm font-bold text-slate-600">
-                              <div className="w-1.5 h-1.5 rounded-full bg-slate-950" />
-                              {benefit}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                    </ScrollArea>
                   </div>
                 </DialogContent>
               </Dialog>
