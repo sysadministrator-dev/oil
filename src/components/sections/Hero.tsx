@@ -49,11 +49,11 @@ export const Hero = () => {
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">{t('hero.molecular')}</span>
           </div>
           
-          <h1 className="text-7xl md:text-[10rem] font-black mb-12 leading-[0.85] tracking-[-0.05em] luxury-text-gradient animate-fade-in-up whitespace-pre-line">
+          <h1 className="text-7xl md:text-[10rem] font-black mb-12 leading-[0.85] tracking-[-0.05em] luxury-text-gradient animate-fade-in-up whitespace-pre-line text-center">
             {t('hero.title')}
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-400 mb-20 max-w-2xl mx-auto leading-relaxed font-medium tracking-tight animate-fade-in-up [animation-delay:200ms]">
+          <p className="text-lg md:text-xl text-slate-400 mb-20 max-w-2xl mx-auto leading-relaxed font-medium tracking-tight animate-fade-in-up [animation-delay:200ms] text-center">
             {t('hero.subtitle')}
           </p>
           
