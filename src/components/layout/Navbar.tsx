@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -6,11 +7,13 @@ import { Droplets, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import { useLanguage, type Language } from '@/context/LanguageContext';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   React.useEffect(() => {
     setMounted(true);
@@ -22,13 +25,15 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Коллекция', href: '#products' },
-    { name: 'Интеллект', href: '#selector' },
-    { name: 'История', href: '#about' },
-    { name: 'Консьерж', href: '#contact' },
+    { name: t('nav.collection'), href: '#products' },
+    { name: t('nav.intelligence'), href: '#selector' },
+    { name: t('nav.history'), href: '#about' },
+    { name: t('nav.concierge'), href: '#contact' },
   ];
 
   if (!mounted) return null;
+
+  const languages: Language[] = ['AZ', 'RU', 'EN'];
 
   return (
     <nav className={cn(
@@ -59,15 +64,42 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* Phone Right */}
-        <div className="hidden md:flex items-center gap-4">
-          <Link href="tel:+78005553535" className="text-xs font-bold tracking-widest text-slate-950 hover:opacity-70 transition-opacity">
-            +7 800 555 35 35
-          </Link>
+        {/* Language Switcher Right */}
+        <div className="hidden md:flex items-center gap-2">
+          {languages.map((lang) => (
+            <button
+              key={lang}
+              onClick={() => setLanguage(lang)}
+              className={cn(
+                "px-2 py-1 text-[10px] font-black transition-all rounded",
+                language === lang 
+                  ? "bg-slate-950 text-white" 
+                  : "bg-slate-50 text-slate-400 hover:text-slate-950"
+              )}
+            >
+              {lang}
+            </button>
+          ))}
         </div>
 
         {/* Mobile Nav */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-4">
+          <div className="flex gap-1">
+            {languages.map((lang) => (
+              <button
+                key={lang}
+                onClick={() => setLanguage(lang)}
+                className={cn(
+                  "px-1.5 py-0.5 text-[9px] font-black rounded",
+                  language === lang 
+                    ? "bg-slate-950 text-white" 
+                    : "bg-slate-100 text-slate-400"
+                )}
+              >
+                {lang}
+              </button>
+            ))}
+          </div>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="hover:bg-slate-50 rounded-full">

@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -6,79 +7,47 @@ import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from '@/components/ui/dialog';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Plus } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface Product {
   id: string;
-  name: string;
-  type: string;
-  spec: string;
-  description: string;
-  benefits: string[];
   imageId: string;
+  spec: string;
 }
 
-const products: Product[] = [
-  {
-    id: '1',
-    name: 'ELITE SYNTH',
-    type: 'Pure Synthetic Lubricant',
-    spec: 'SAE 5W-30',
-    imageId: 'oil-synthetic-5w30',
-    description: 'Вершина синтетических технологий. Создано для тех, кто не приемлет компромиссов в вопросах защиты двигателя.',
-    benefits: ['Нано-защита поверхностей', 'Стабильность при +150°C', 'Ресурс до 20,000 км'],
-  },
-  {
-    id: '2',
-    name: 'ARCTIC FLOW',
-    type: 'Extreme Climate formula',
-    spec: 'SAE 0W-20',
-    imageId: 'oil-synthetic-0w20',
-    description: 'Разработано для безупречного пуска в условиях экстремально низких температур. Мгновенная защита с первой секунды.',
-    benefits: ['Пуск при -45°C', 'Экономия топлива 4%', 'Чистота поршневой группы'],
-  },
-  {
-    id: '3',
-    name: 'CLASSIC PRO',
-    type: 'High Performance Blend',
-    spec: 'SAE 10W-40',
-    imageId: 'oil-semi-10w40',
-    description: 'Надежность проверенная временем. Идеальный баланс между классическими традициями и современными присадками.',
-    benefits: ['Снижение шума двигателя', 'Удаление нагара', 'Защита от окисления'],
-  },
-  {
-    id: '4',
-    name: 'TRUCK HD',
-    type: 'Heavy Duty Power',
-    spec: 'SAE 15W-40',
-    imageId: 'oil-diesel-15w40',
-    description: 'Мощь и выносливость для коммерческой техники. Работает там, где другие сдаются.',
-    benefits: ['Для сверхвысоких нагрузок', 'Контроль вязкости', 'Защита от коррозии'],
-  },
+const productIds: Product[] = [
+  { id: '1', imageId: 'oil-synthetic-5w30', spec: 'SAE 5W-30' },
+  { id: '2', imageId: 'oil-synthetic-0w20', spec: 'SAE 0W-20' },
+  { id: '3', imageId: 'oil-semi-10w40', spec: 'SAE 10W-40' },
+  { id: '4', imageId: 'oil-diesel-15w40', spec: 'SAE 15W-40' },
 ];
 
 export const ProductShowcase = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="products" className="py-40 bg-white">
       <div className="container mx-auto px-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-10">
           <div className="max-w-2xl">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-6 block">Curated Selection</span>
-            <h2 className="text-5xl md:text-8xl font-black text-slate-950 tracking-tighter leading-[0.9]">
-              ЭСТЕТИКА <br />ИНЖЕНЕРИИ.
+            <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-6 block">{t('products.tag')}</span>
+            <h2 className="text-5xl md:text-8xl font-black text-slate-950 tracking-tighter leading-[0.9] whitespace-pre-line">
+              {t('products.title')}
             </h2>
           </div>
           <div className="pb-4">
              <p className="text-slate-400 font-medium max-w-sm text-right leading-relaxed">
-              Каждый продукт в нашей линейке — это результат многолетних исследований и стремления к абсолютному совершенству.
+              {t('products.desc')}
             </p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {products.map((product) => {
-            const imageData = PlaceHolderImages.find(img => img.id === product.imageId);
+          {productIds.map((item) => {
+            const product = t(`products.items.${item.id}`);
+            const imageData = PlaceHolderImages.find(img => img.id === item.imageId);
             return (
-              <Dialog key={product.id}>
+              <Dialog key={item.id}>
                 <DialogTrigger asChild>
                   <div className="group cursor-pointer">
                     <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-slate-50 mb-8">
@@ -99,7 +68,7 @@ export const ProductShowcase = () => {
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <h3 className="text-2xl font-black text-slate-950 tracking-tighter">{product.name}</h3>
-                        <span className="text-[10px] font-bold text-slate-400 tracking-widest">{product.spec}</span>
+                        <span className="text-[10px] font-bold text-slate-400 tracking-widest">{item.spec}</span>
                       </div>
                       <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">{product.type}</p>
                     </div>
@@ -119,16 +88,16 @@ export const ProductShowcase = () => {
                     </div>
                     <div className="md:w-1/2 p-16 flex flex-col justify-center space-y-12">
                       <div className="space-y-6">
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">{product.spec}</span>
+                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">{item.spec}</span>
                         <DialogTitle className="text-6xl font-black text-slate-950 tracking-tighter">{product.name}</DialogTitle>
                         <DialogDescription className="text-xl text-slate-500 font-medium leading-relaxed">
-                          {product.description}
+                          {product.desc}
                         </DialogDescription>
                       </div>
                       <div className="space-y-6">
-                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-950">Характеристики серии</h4>
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-950">{t('products.specs')}</h4>
                         <ul className="grid grid-cols-1 gap-4">
-                          {product.benefits.map((benefit, i) => (
+                          {product.benefits.map((benefit: string, i: number) => (
                             <li key={i} className="flex items-center gap-4 text-sm font-bold text-slate-600">
                               <div className="w-1.5 h-1.5 rounded-full bg-slate-950" />
                               {benefit}

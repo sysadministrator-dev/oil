@@ -11,15 +11,17 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, 'Представьтесь, пожалуйста'),
-  email: z.string().email('Некорректный email'),
-  phone: z.string().min(10, 'Укажите контактный телефон'),
-  message: z.string().min(10, 'Опишите ваш вопрос подробнее'),
+  name: z.string().min(2),
+  email: z.string().email(),
+  phone: z.string().min(10),
+  message: z.string().min(10),
 });
 
 export const ContactForm = () => {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -34,57 +36,59 @@ export const ContactForm = () => {
   function onSubmit(values: z.infer<typeof contactFormSchema>) {
     console.log(values);
     toast({
-      title: "Сообщение отправлено!",
-      description: "Наш менеджер свяжется с вами в ближайшее время.",
+      title: t('contact.success'),
+      description: t('contact.successDesc'),
     });
     form.reset();
   }
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl md:text-5xl font-bold font-headline mb-6">Остались вопросы? <br /><span className="text-accent">Мы на связи!</span></h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Нужна консультация по выбору масла или хотите уточнить наличие? Оставьте заявку, и мы перезвоним в течение 15 минут.
+                <h2 className="text-3xl md:text-5xl font-black font-headline mb-6 whitespace-pre-line leading-tight">
+                  {t('contact.title')}
+                </h2>
+                <p className="text-slate-400 font-medium leading-relaxed">
+                  {t('contact.desc')}
                 </p>
               </div>
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-secondary rounded-full">
-                    <Phone className="w-6 h-6 text-accent" />
+                  <div className="p-3 bg-slate-50 rounded-full">
+                    <Phone className="w-6 h-6 text-slate-950" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground uppercase tracking-widest font-bold">Телефон</p>
-                    <p className="text-lg font-medium">+7 (800) 555-35-35</p>
+                    <p className="text-[10px] text-slate-300 uppercase tracking-widest font-black">{t('contact.phone')}</p>
+                    <p className="text-lg font-bold text-slate-950">+7 (800) 555-35-35</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-secondary rounded-full">
-                    <Mail className="w-6 h-6 text-accent" />
+                  <div className="p-3 bg-slate-50 rounded-full">
+                    <Mail className="w-6 h-6 text-slate-950" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground uppercase tracking-widest font-bold">Email</p>
-                    <p className="text-lg font-medium">info@masloguru.ru</p>
+                    <p className="text-[10px] text-slate-300 uppercase tracking-widest font-black">{t('contact.email')}</p>
+                    <p className="text-lg font-bold text-slate-950">info@masloguru.ru</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-secondary rounded-full">
-                    <MapPin className="w-6 h-6 text-accent" />
+                  <div className="p-3 bg-slate-50 rounded-full">
+                    <MapPin className="w-6 h-6 text-slate-950" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground uppercase tracking-widest font-bold">Офис</p>
-                    <p className="text-lg font-medium">г. Москва, ул. Автомобильная, д. 42</p>
+                    <p className="text-[10px] text-slate-300 uppercase tracking-widest font-black">{t('contact.office')}</p>
+                    <p className="text-lg font-bold text-slate-950">{t('contact.officeAddr')}</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-card p-8 rounded-2xl border border-border shadow-2xl">
+            <div className="bg-white p-10 rounded-3xl border border-slate-100 shadow-2xl">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
@@ -92,9 +96,9 @@ export const ContactForm = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Ваше имя</FormLabel>
+                        <FormLabel className="text-[10px] font-black uppercase tracking-widest text-slate-400">{t('contact.nameLabel')}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Иван Иванов" className="bg-background h-12" {...field} />
+                          <Input placeholder="John Doe" className="bg-slate-50 border-none h-12" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -106,9 +110,9 @@ export const ContactForm = () => {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Email</FormLabel>
+                          <FormLabel className="text-[10px] font-black uppercase tracking-widest text-slate-400">{t('contact.email')}</FormLabel>
                           <FormControl>
-                            <Input placeholder="example@mail.ru" className="bg-background h-12" {...field} />
+                            <Input placeholder="example@mail.ru" className="bg-slate-50 border-none h-12" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -119,9 +123,9 @@ export const ContactForm = () => {
                       name="phone"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Телефон</FormLabel>
+                          <FormLabel className="text-[10px] font-black uppercase tracking-widest text-slate-400">{t('contact.phone')}</FormLabel>
                           <FormControl>
-                            <Input placeholder="+7 (___) ___-__-__" className="bg-background h-12" {...field} />
+                            <Input placeholder="+7 (___) ___-__-__" className="bg-slate-50 border-none h-12" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -133,11 +137,11 @@ export const ContactForm = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Сообщение</FormLabel>
+                        <FormLabel className="text-[10px] font-black uppercase tracking-widest text-slate-400">{t('contact.messageLabel')}</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Опишите ваш автомобиль и интересующий вопрос..." 
-                            className="bg-background min-h-[120px] resize-none" 
+                            placeholder="..." 
+                            className="bg-slate-50 border-none min-h-[120px] resize-none" 
                             {...field} 
                           />
                         </FormControl>
@@ -145,8 +149,8 @@ export const ContactForm = () => {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 h-14 text-lg font-bold">
-                    Отправить заявку <Send className="ml-2 w-5 h-5" />
+                  <Button type="submit" className="w-full bg-slate-950 text-white hover:bg-slate-800 h-14 text-lg font-black uppercase tracking-widest">
+                    {t('contact.sendBtn')} <Send className="ml-2 w-5 h-5" />
                   </Button>
                 </form>
               </Form>
