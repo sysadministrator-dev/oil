@@ -18,7 +18,7 @@ export default function CatalogPage() {
           <div className="mb-20 text-center">
              <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-6 block">Premium selection</span>
              <h1 className="text-6xl md:text-9xl font-black text-slate-950 tracking-tighter leading-tight uppercase">
-               {t('products.catalogTitle')}
+               {t('nav.catalog')}
              </h1>
           </div>
           
