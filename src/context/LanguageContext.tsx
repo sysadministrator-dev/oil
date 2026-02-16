@@ -38,8 +38,16 @@ const translations: Translations = {
         '1': {
           name: 'Mobil 1 ESP 5W-30',
           type: 'Saf Sintetik Sürtkü Yağı',
-          desc: 'Sintetik texnologiyaların zirvəsi. Mühərrikin qorunması məsələsində kompromisə yer verməyənlər üçün yaradılmışdır.',
-          benefits: ['Səthlərin nano-qoruması', '+150°C-də stabillik', '20,000 km-ə qədər resurs'],
+          desc: 'mühərrikin müstəsna təmizliyini, ümumi istismar xüsusiyyətlərini və aşınmadan qorunmasını təmin etmək üçün hazırlanmış, təkmilləşdirilmiş işçi xüsusiyyətlərinə malik sintetik mühərrik yağıdır. Mobil 1 ESP 5W-30 yağı, dizel və benzinlə işləyən avtomobillərin işlənmiş qazlarının toksikliyini azaldan sistemlərin xidmət müddətini uzatmaq və səmərəliliyini qorumaq üçün şirkətin ekspertləri tərəfindən hazırlanmışdır. Mobil 1 ESP 5W-30, müasir dizel və benzinli minik avtomobillərinə qoyulan bir çox sahə standartlarının və qabaqcıl avtomobil istehsalçılarının tələblərinə cavab verir və ya onları üstələyir.',
+          benefits: [
+            'Dizel mühərriklərinin qurum filtrlərində hissəciklərin yığılmasını azaltmağa kömək edir',
+            'Benzin mühərriklərinin katalitik neytrallaşdırıcılarının "zəhərlənməsini" azaltmağa kömək edir',
+            'Çöküntü və şlamın əmələ gəlməsini azaldır, mühərrikin uzun ömürlü olmasını və təmizliyini təmin edir',
+            'Yağın köhnəlmə prosesini yavaşlatmağa kömək edir, yağdəyişmə intervalı artırıldıqda mühərrikin qorunmasını təmin edir',
+            'Ətraf mühitin karbohidrogenlərlə çirklənməsini azaldır',
+            'Yanacaq qənaətinə kömək edir',
+            'Soyuq havada sürətli işə düşmə və anında qorunma mühərrikin xidmət müddətini uzatmağa kömək edir'
+          ],
         },
         '2': {
           name: 'ARCTIC FLOW',
@@ -103,7 +111,7 @@ const translations: Translations = {
     },
     contact: {
       title: 'Sualınız qaldı?\nBiz əlaqədəyik!',
-      desc: 'Yağ seçimi və ya mövcudluq barədə məsləhət lazımdır? Müraciət qoyun, 15 dəqiqə ərzində sizə zəng edək.',
+      desc: 'Yağ seçimi və ya mövcudluq barədə məsləҳət lazımdır? Müraciət qoyun, 15 dəqiqə ərzində sizə zəng edək.',
       phone: 'Telefon',
       email: 'Email',
       office: 'Ofis',
@@ -268,8 +276,16 @@ const translations: Translations = {
         '1': {
           name: 'Mobil 1 ESP 5W-30',
           type: 'Pure Synthetic Lubricant',
-          desc: 'The pinnacle of synthetic technology. Created for those who accept no compromises in engine protection.',
-          benefits: ['Nano-surface protection', 'Stability at +150°C', 'Service life up to 20,000 km'],
+          desc: 'advanced full synthetic engine oil designed to help provide exceptional cleaning power, wear protection and overall performance. Mobil 1 ESP 5W-30 has been expert engineered to help prolong the life and maintain the efficiency of emission systems in both diesel and gasoline powered automobiles. Mobil 1 ESP 5W-30 meets or exceeds the requirements of many leading industry and car manufacturers\' standards required for newer modern diesel and gasoline powered passenger car engines.',
+          benefits: [
+            'Helps to reduce particulate build up in Diesel Particulate Filters',
+            'Helps to reduce poisoning of Gasoline Catalytic Converters',
+            'Reduces deposits and sludge build-up to enable long and clean engine life',
+            'Helps to reduce oil aging allowing extended drain interval protection',
+            'Less hydrocarbon pollution',
+            'Aids fuel economy',
+            'Quick cold weather starting and ultra-fast protection helps to extend engine life'
+          ],
         },
         '2': {
           name: 'ARCTIC FLOW',
