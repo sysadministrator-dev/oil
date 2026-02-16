@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -33,9 +34,10 @@ export const Footer = () => {
           <div>
             <h4 className="font-black mb-6 uppercase text-[10px] tracking-[0.2em] text-slate-950">{t('footer.nav')}</h4>
             <ul className="space-y-4">
-              <li><Link href="#products" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.collection')}</Link></li>
-              <li><Link href="#about" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.history')}</Link></li>
-              <li><Link href="#contact" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.concierge')}</Link></li>
+              <li><Link href="/" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.home')}</Link></li>
+              <li><Link href="/catalog" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.catalog')}</Link></li>
+              <li><Link href="/#about" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.history')}</Link></li>
+              <li><Link href="/#contact" className="text-sm font-bold text-slate-400 hover:text-slate-950 transition-colors">{t('nav.contacts')}</Link></li>
             </ul>
           </div>
 

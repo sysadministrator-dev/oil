@@ -14,11 +14,10 @@ type Translations = {
 const translations: Translations = {
   AZ: {
     nav: {
-      collection: 'Kolleksiya',
+      home: 'Ana Səhifə',
       catalog: 'Kataloq',
-      intelligence: 'İntellekt',
       history: 'Tarix',
-      concierge: 'Konsyerj',
+      contacts: 'Əlaqə',
     },
     hero: {
       molecular: 'Molekulyar Mühərrik Qoruması',
@@ -129,11 +128,10 @@ const translations: Translations = {
   },
   RU: {
     nav: {
-      collection: 'Коллекция',
+      home: 'Главная',
       catalog: 'Каталог',
-      intelligence: 'Интеллект',
       history: 'История',
-      concierge: 'Консьерж',
+      contacts: 'Контакты',
     },
     hero: {
       molecular: 'Molecular Engine Protection',
@@ -244,11 +242,10 @@ const translations: Translations = {
   },
   EN: {
     nav: {
-      collection: 'Collection',
+      home: 'Home',
       catalog: 'Catalog',
-      intelligence: 'Intelligence',
       history: 'History',
-      concierge: 'Concierge',
+      contacts: 'Contacts',
     },
     hero: {
       molecular: 'Molecular Engine Protection',
