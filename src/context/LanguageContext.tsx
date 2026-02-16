@@ -75,10 +75,13 @@ const translations: Translations = {
           ],
         },
         '4': {
-          name: 'TRUCK HD',
-          type: 'Ağır Rejim Gücü',
-          desc: 'Kommersiya texnikası üçün güc və dözümlülük. Başqalarının təslim olduğu yerdə işləyir.',
-          benefits: ['Hədsiz yüklər üçün', 'Özlülük nəzarəti', 'Korroziyadan qorunma'],
+          name: 'Alpine RSL 5W-30 GM',
+          type: 'Synthetic High Performance',
+          desc: 'Minik avtomobilləri üçün ağır iş şəraitində istifadə olunan sintetik aşağı özlülüklü mühərrik yağı. Sintetik komponentlər və onlara uyğunlaşdırılmış ən yeni qatqı kompleksi cari praktiki tələblərə cavab verir. Alpine RSL 5W-30 GM mühərrik yağlarının əhəmiyyətli dərəcədə yaxşılaşdırılmış keyfiyyəti aşınmadan qorunmanın və mühərrik təmizliyinin daha da artırılması ilə bağlıdır. Soyuq şəraitdə aşağı özlülük və yüksək temperaturda lazımi özlülük sayəsində yüksək yanacaq qənaəti potensialı təmin edilir.',
+          benefits: [
+            'Alpine RSL 5W-30 GM tələbkar mühərriklər üçün yüksək məhsuldarlıqlı mühərrik yağıdır.',
+            'Minik avtomobillərinin benzin və dizel mühərrikləri, o cümlədən turboşarjlı və birbaşa püskürtməli mühərriklər üçün istənilən iş şəraitində tövsiyə olunur.'
+          ],
         },
       }
     },
@@ -116,7 +119,7 @@ const translations: Translations = {
         s2: '15,000+ müştəri',
         s2d: 'Bizə etibar edirlər',
         s3: 'Yalnız orijinal',
-        s3d: 'Birbaşa işləyirik',
+        s3d: 'Birбаşa işləyirik',
         s4: '2 saata çatdırılma',
         s4d: 'Öz logistikamız',
       },
@@ -207,10 +210,13 @@ const translations: Translations = {
           ],
         },
         '4': {
-          name: 'TRUCK HD',
-          type: 'High Performance Blend',
-          desc: 'Мощь и выносливость для коммерческой техники. Работает там, где другие сдаются.',
-          benefits: ['Для сверхвысоких нагрузок', 'Контроль вязкости', 'Защита от коррозии'],
+          name: 'Alpine RSL 5W-30 GM',
+          type: 'Synthetic High Performance',
+          desc: 'Синтетическое маловязкое моторное масло для тяжёлых условий работы, для легковых автомобилей. Синтетические компоненты и адаптированный к ним комплекс новейших присадок обеспечивают соблюдение текущих практических требований. Существенно улучшенное качество моторных масел Alpine RSL 5W-30 GM, обусловлено дальнейшим совершенствованием защиты от износа и повышением чистоты двигателя. За счёт низкой вязкости в холодных условиях и надлежащей вязкости при высокой температуре обеспечивается высокий потенциал экономии топлива.',
+          benefits: [
+            'Alpine RSL 5W-30 GM высокопроизводительное моторное масло для требовательных двигателей.',
+            'Рекомендуется для бензиновых и дизельных двигателей легковых автомобилей, в т.ч. с турбонаддувом и прямым впрыском, при любых рабочих условиях.'
+          ],
         },
       }
     },
@@ -339,10 +345,13 @@ const translations: Translations = {
           ],
         },
         '4': {
-          name: 'TRUCK HD',
-          type: 'Heavy Duty Power',
-          desc: 'Power and endurance for commercial vehicles. Works where others give up.',
-          benefits: ['For ultra-high loads', 'Viscosity control', 'Corrosion protection'],
+          name: 'Alpine RSL 5W-30 GM',
+          type: 'Synthetic High Performance',
+          desc: 'Synthetic low-viscosity motor oil for heavy-duty operating conditions in passenger cars. Synthetic components and an adapted complex of state-of-the-art additives ensure compliance with current practical requirements. Significantly improved quality of Alpine RSL 5W-30 GM motor oils is due to further improvement of wear protection and engine cleanliness. Due to low viscosity in cold conditions and proper viscosity at high temperatures, a high fuel saving potential is provided.',
+          benefits: [
+            'Alpine RSL 5W-30 GM is a high-performance motor oil for demanding engines.',
+            'Recommended for gasoline and diesel passenger car engines, including those with turbocharging and direct injection, under any operating conditions.'
+          ],
         },
       }
     },
