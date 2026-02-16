@@ -71,9 +71,9 @@ function Calendar({
             return <ChevronRight className={cn("h-4 w-4", className)} {...props} />
           if (orientation === "up")
             return <ChevronUp className={cn("h-4 w-4", className)} {...props} />
-          if (orientation === "down")
-            return <ChevronDown className={cn("h-4 w-4", className)} {...props} />
-          return null
+          
+          // По умолчанию возвращаем ChevronDown, чтобы избежать возврата null и ошибки TS2322
+          return <ChevronDown className={cn("h-4 w-4", className)} {...props} />
         },
       }}
       {...props}
