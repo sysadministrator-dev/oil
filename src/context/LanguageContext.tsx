@@ -16,7 +16,7 @@ const translations: Translations = {
     nav: {
       home: 'Ana Səhifə',
       catalog: 'Kataloq',
-      history: 'Tarix',
+      about: 'Şirkət haqqında',
       contacts: 'Əlaqə',
     },
     hero: {
@@ -130,7 +130,7 @@ const translations: Translations = {
     nav: {
       home: 'Главная',
       catalog: 'Каталог',
-      history: 'История',
+      about: 'О компании',
       contacts: 'Контакты',
     },
     hero: {
@@ -244,7 +244,7 @@ const translations: Translations = {
     nav: {
       home: 'Home',
       catalog: 'Catalog',
-      history: 'History',
+      about: 'About Us',
       contacts: 'Contacts',
     },
     hero: {
