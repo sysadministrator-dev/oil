@@ -3,12 +3,17 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Droplets, Menu, X } from 'lucide-react';
+import { Droplets, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navLinks = [
     { name: 'Продукты', href: '#products' },
@@ -45,30 +50,36 @@ export const Navbar = () => {
 
         {/* Mobile Nav */}
         <div className="md:hidden">
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="w-6 h-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="bg-background border-border pt-12">
-              <div className="flex flex-col gap-6">
-                {navLinks.map((link) => (
-                  <Link 
-                    key={link.name} 
-                    href={link.href} 
-                    onClick={() => setIsOpen(false)}
-                    className="text-lg font-medium hover:text-accent transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-                <Button className="w-full bg-primary" asChild>
-                  <Link href="#contact" onClick={() => setIsOpen(false)}>Связаться с нами</Link>
+          {mounted ? (
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="w-6 h-6" />
                 </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-background border-border pt-12">
+                <div className="flex flex-col gap-6">
+                  {navLinks.map((link) => (
+                    <Link 
+                      key={link.name} 
+                      href={link.href} 
+                      onClick={() => setIsOpen(false)}
+                      className="text-lg font-medium hover:text-accent transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                  <Button className="w-full bg-primary" asChild>
+                    <Link href="#contact" onClick={() => setIsOpen(false)}>Связаться с нами</Link>
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
+          ) : (
+            <Button variant="ghost" size="icon">
+              <Menu className="w-6 h-6" />
+            </Button>
+          )}
         </div>
       </div>
     </nav>
