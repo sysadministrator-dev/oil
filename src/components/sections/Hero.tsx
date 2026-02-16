@@ -3,8 +3,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ShieldCheck, Zap, Award } from 'lucide-react';
 
@@ -12,7 +10,7 @@ export const Hero = () => {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         {heroImage && (
@@ -39,15 +37,6 @@ export const Hero = () => {
             Гарантия качества, профессиональный подбор и быстрая доставка.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-10 h-14 text-lg" asChild>
-              <Link href="#products">Выбрать масло</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 px-10 h-14 text-lg" asChild>
-              <Link href="#selector">Подобрать с ИИ</Link>
-            </Button>
-          </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-white/10 max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-3">
               <ShieldCheck className="w-6 h-6 text-accent" />
