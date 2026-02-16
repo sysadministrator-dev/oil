@@ -25,25 +25,31 @@ const productIds: Product[] = [
   { id: '4', imageId: 'oil-alpine-5w30', spec: 'SAE 5W-30' },
 ];
 
-export const ProductShowcase = () => {
+interface ProductShowcaseProps {
+  hideViewAll?: boolean;
+}
+
+export const ProductShowcase = ({ hideViewAll = false }: ProductShowcaseProps) => {
   const { t } = useLanguage();
 
   return (
-    <section id="products" className="py-40 bg-white">
+    <section id="products" className="py-20 bg-white">
       <div className="container mx-auto px-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-10">
-          <div className="max-w-2xl">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-6 block">{t('products.tag')}</span>
-            <h2 className="text-5xl md:text-8xl font-black text-slate-950 tracking-tighter leading-[0.9] whitespace-pre-line">
-              {t('products.title')}
-            </h2>
+        {!hideViewAll && (
+          <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-10">
+            <div className="max-w-2xl">
+              <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-6 block">{t('products.tag')}</span>
+              <h2 className="text-5xl md:text-8xl font-black text-slate-950 tracking-tighter leading-[0.9] whitespace-pre-line">
+                {t('products.title')}
+              </h2>
+            </div>
+            <div className="pb-4">
+               <p className="text-slate-400 font-medium max-w-sm text-right leading-relaxed">
+                {t('products.desc')}
+              </p>
+            </div>
           </div>
-          <div className="pb-4">
-             <p className="text-slate-400 font-medium max-w-sm text-right leading-relaxed">
-              {t('products.desc')}
-            </p>
-          </div>
-        </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {productIds.map((item) => {
@@ -118,13 +124,15 @@ export const ProductShowcase = () => {
           })}
         </div>
 
-        <div className="mt-32 flex justify-center">
-          <Link href="/catalog">
-            <Button variant="outline" className="border-slate-950 text-slate-950 hover:bg-slate-950 hover:text-white px-12 h-16 rounded-full font-black uppercase tracking-[0.2em] text-[11px] transition-all duration-700 shadow-xl hover:shadow-2xl hover:-translate-y-1">
-              {t('products.viewAll')}
-            </Button>
-          </Link>
-        </div>
+        {!hideViewAll && (
+          <div className="mt-32 flex justify-center">
+            <Link href="/catalog">
+              <Button variant="outline" className="border-slate-950 text-slate-950 hover:bg-slate-950 hover:text-white px-12 h-16 rounded-full font-black uppercase tracking-[0.2em] text-[11px] transition-all duration-700 shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                {t('products.viewAll')}
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
