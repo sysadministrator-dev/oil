@@ -50,10 +50,16 @@ const translations: Translations = {
           ],
         },
         '2': {
-          name: 'ARCTIC FLOW',
-          type: 'Ekstremal İqlim Formulu',
-          desc: 'Ekstremal aşağı temperaturlarda qüsursuz işə düşmə üçün hazırlanmışdır. İlk saniyədən anında qorunma.',
-          benefits: ['-45°C-də işə düşmə', '4% yanacaq qənaəti', 'Porsşen qrupunun təmizliyi'],
+          name: 'Castrol EDGE 5W-30 C3',
+          type: 'TITANIUM FST™ Texnologiyası',
+          desc: 'Tam sintetik mühərrik yağı, titan birləşmələri sayəsində yağ təbəqəsinə əlavə davamlılıq verən ən son TITANIUM FST™ texnologiyasından istifadə edilməklə istehsal edilmişdir. TITANIUM FST™ ekstremal yüklər şəraitində yağın davranışını kökündən dəyişdirərək əlavə zərbə uducu qat yaradır. Sınaqlar təsdiq etdi ki, TITANIUM FST™ təbəqənin möhkəmliyini 2 dəfə artırır, onun qırılmasının qarşısını alır və mühərrikin maksimum məhsuldarlığı üçün sürtünməni azaldır.',
+          benefits: [
+            'Həm qısa, həm də uzunmüddətli dövrdə mühərrikin maksimum səmərəliliyini təmin edir',
+            'Çöküntülərin yaranmasını qarşısını alır, mühərrikin akselerator pedalına reaksiya sürətini artırmağa kömək edir',
+            'Hətta yüksək yüklər şəraitində mühərrikin maksimum gücünü saxlayır',
+            'Mühərrikin FİƏ-ni artırır (müstəqil sınaqlarla təsdiqlənib)',
+            'Müxtəlif hərəkət şəraitində və geniş temperatur diapazonunda detalların misilsiz qorunmasını təmin edir'
+          ],
         },
         '3': {
           name: 'CLASSIC PRO',
@@ -123,7 +129,7 @@ const translations: Translations = {
       successDesc: 'Menecerimiz tezliklə sizinlə əlaqə saxlayacaq.',
     },
     footer: {
-      desc: 'Professional mühərrik yağlarının seçimi və satışı. 2012-ci ildən mühərrikinizin sağlamlığının keşiyindəyik.',
+      desc: 'Professional mühərrik yağlarının seçimi və satışı. 2012-ci ildən mühərrikinizin sağlıkın keşiyindəyik.',
       nav: 'Naviqasiya',
       support: 'Dəstək',
       newsletter: 'Xəbərlər',
@@ -169,10 +175,16 @@ const translations: Translations = {
           ],
         },
         '2': {
-          name: 'ARCTIC FLOW',
-          type: 'Extreme Climate formula',
-          desc: 'Разработано для безупречного пуска в условиях экстремально низких температур. Мгновенная защита с первой секунды.',
-          benefits: ['Пуск при -45°C', 'Экономия топлива 4%', 'Чистота поршневой группы'],
+          name: 'Castrol EDGE 5W-30 C3',
+          type: 'Технология TITANIUM FST™',
+          desc: 'полностью синтетическое моторное масло, произведено с использованием новейшей технологии TITANIUM FST™, придающей масляной пленке дополнительную прочность благодаря соединениям титана. TITANIUM FST™ радикально меняет поведение масла в условиях экстремальных нагрузок, формируя дополнительный ударопоглощающий слой. Испытания подтвердили, что TITANIUM FST™ в 2 раза увеличивает прочность пленки, предотвращая ее разрыв и снижая трение для максимальной производительности двигателя.',
+          benefits: [
+            'Обеспечивает максимальную эффективность работы мотора как в краткосрочном периоде времени, так и в течение длительного срока службы;',
+            'Подавляет образование отложений, способствуя повышению скорости реакции двигателя на нажатие педали акселератора;',
+            'Поддерживает максимальную мощность мотора, даже в условиях повышенных нагрузок;',
+            'Повышает КПД двигателя (подтверждено независимыми испытаниями);',
+            'Обеспечивает непревзойдённый уровень защиты деталей в разных условиях движения и широком диапазоне температур.'
+          ],
         },
         '3': {
           name: 'CLASSIC PRO',
@@ -288,10 +300,16 @@ const translations: Translations = {
           ],
         },
         '2': {
-          name: 'ARCTIC FLOW',
-          type: 'Extreme Climate formula',
-          desc: 'Developed for flawless start-up in extremely low temperatures. Instant protection from the first second.',
-          benefits: ['Start at -45°C', '4% fuel economy', 'Piston group cleanliness'],
+          name: 'Castrol EDGE 5W-30 C3',
+          type: 'TITANIUM FST™ Technology',
+          desc: 'Full synthetic engine oil produced using the latest TITANIUM FST™ technology, which gives the oil film extra strength thanks to titanium compounds. TITANIUM FST™ radically changes the behavior of the oil under extreme loads, forming an additional shock-absorbing layer. Tests have confirmed that TITANIUM FST™ doubles the strength of the film, preventing it from breaking and reducing friction for maximum engine performance.',
+          benefits: [
+            'Provides maximum engine efficiency in both the short and long term',
+            'Suppresses the formation of deposits, helping to increase the speed of the engine response to the accelerator pedal',
+            'Maintains maximum engine power, even under high load conditions',
+            'Improves engine efficiency (confirmed by independent tests)',
+            'Provides an unsurpassed level of part protection in different driving conditions and a wide range of temperatures'
+          ],
         },
         '3': {
           name: 'CLASSIC PRO',
