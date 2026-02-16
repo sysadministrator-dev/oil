@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -24,9 +25,10 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: t('nav.collection'), href: '#products' },
-    { name: t('nav.history'), href: '#about' },
-    { name: t('nav.concierge'), href: '#contact' },
+    { name: t('nav.collection'), href: '/#products' },
+    { name: t('nav.catalog'), href: '/catalog' },
+    { name: t('nav.history'), href: '/#about' },
+    { name: t('nav.concierge'), href: '/#contact' },
   ];
 
   if (!mounted) return null;

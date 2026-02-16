@@ -15,6 +15,7 @@ const translations: Translations = {
   AZ: {
     nav: {
       collection: 'Kolleksiya',
+      catalog: 'Kataloq',
       intelligence: 'İntellekt',
       history: 'Tarix',
       concierge: 'Konsyerj',
@@ -40,12 +41,12 @@ const translations: Translations = {
         '1': {
           name: 'Mobil 1 ESP 5W-30',
           type: 'Saf Sintetik Sürtkü Yağı',
-          desc: 'mühərrikin müstəsna təmizliyini, ümumi istismar xüsusiyyətlərini və aşınmadan qorunmasını təmin etmək üçün hazırlanmış, təkmilləşdirilmiş işçi xüsusiyyətlərinə malik sintetik mühərrik yağıdır. Mobil 1 ESP 5W-30 yağı, dizel və benzinlə işləyən avtomobillərin işlənmiş qazlarının toksikliyini azaldan sistemlərin xidmət müddətini uzatmaq və səmərəliliyini qorumaq üçün şirkətin ekspertləri tərəfindən hazırlanmışdır. Mobil 1 ESP 5W-30, müasir dizel və benzinli minik avtomobillərinə qoyulan bir çox sahə standartlarının və qabaqcıl avtomobil istehsalçılarının tələblərinə cavab verir və ya onları üstələyir.',
+          desc: 'mühərrikin müstəsna təmizliyini, ümumi istismar xüsusiyyətlərini və aşınmadan qorunmasını təmin etmək üçün hazırlanmış, təkmilləşdirilmiş işçi xüsusiyyətlərinə malik sintetik mühərrik yağıdır. Mobil 1 ESP 5W-30 yağı, dizel və benzinlə işləyən avtomobillərin işlənmiş qazlarının toksikliyini azaldan sistemlərin xidmət müddətini uzatmaq və səmərəliliyini qorumaq üçün şirkətin ekspertləри tərəfindən hazırlanmışdır. Mobil 1 ESP 5W-30, müasir dizel və benzinli minik avtomobillərinə qoyulan bir çox sahə standartlarının və qabaqcıl avtomobil istehsalçılarının tələblərinə cavab verir və ya onları üstələyir.',
           benefits: [
             'Dizel mühərriklərinin qurum filtrlərində hissəciklərin yığılmasını azaltmağa kömək edir',
             'Benzin mühərriklərinin katalitik neytrallaşdırıcılarının "zəhərlənməsini" azaltmağa kömək edir',
             'Çöküntü və şlamın əmələ gəlməsini azaldır, mühərrikin uzun ömürlü olmasını və təmizliyini təmin edir',
-            'Yağın köhnəlmə prosesini yavaşlatmağa kömək edir, yağdəyiшmə intervalı artırıldıqda mühərrikin qorunmasını təmin edir',
+            'Yağın köhnəlmə prosesini yavaşlatmağa kömək edir, yağdəyişmə intervalı artırıldıqda mühərrikin qorunmasını təmin edir',
             'Ətraf mühitin karbohidrogenlərlə çirklənməsini azaldır',
             'Yanacaq qənaətinə kömək edir',
             'Soyuq havada sürətli işə düşmə və anında qorunma mühərrikin xidmət müddətini uzatmağa kömək edir'
@@ -54,10 +55,10 @@ const translations: Translations = {
         '2': {
           name: 'Castrol EDGE 5W-30 C3',
           type: 'TITANIUM FST™ Texnologiyası',
-          desc: 'Tam sintetik mühərrik yağı, titan birləşmələri sayəsində yağ təbəqəsinə əlavə davamlılıq verən ən son TITANIUM FST™ texnologiyasından istifadə edilməklə istehsal edilmişdir. TITANIUM FST™ ekstremal yüklər şəraitində yağın davranışını kökündən dəyiшdirərək əlavə zərbə uducu qat yaradır. Sınaqlar təsdiq etdi ki, TITANIUM FST™ təbəqənin möhkəmliyini 2 dəfə artırır, onun qırılmasının qarşısını alır və mühərrikin maksimum məhsuldarlığı üçün sürtünməni azaldır.',
+          desc: 'Tam sintetik mühərrik yağı, titan birləşmələri sayəsində yağ təbəqəsinə əlavə davamlılıq verən ən son TITANIUM FST™ texnologiyasından istifadə edilməklə istehsal edilmişdir. TITANIUM FST™ ekstremal yüklər şəraitində yağın davranışını kökündən dəyişdirərək əlavə zərbə uducu qat yaradır. Sınaqlar təsdiq etdi ki, TITANIUM FST™ təbəqənin möhkəmliyini 2 dəfə artırır, onun qırılmasının qarşısını alır və mühərrikin maksimum məhsuldarlığı üçün sürtünməni azaldır.',
           benefits: [
             'Həm qısa, həm də uzunmüddətli dövrdə mühərrikin maksimum səmərəliliyini təmin edir',
-            'Çöküntülərin yaranmasını qarшısını alır, mühərrikin akselerator pedalına reaksiya sürətini artırmağa kömək edir',
+            'Çöküntülərin yaranmasını qarşısını alır, mühərrikin akselerator pedalına reaksiya sürətini artırmağa kömək edir',
             'Hətta yüksək yüklər şəraitində mühərrikin maksimum gücünü saxlayır',
             'Mühərrikin FİƏ-ni artırır (müstəqil sınaqlarla təsdiqlənib)',
             'Mühərrikin müxtəlif hərəkət şəraitində və geniş temperatur diapazonunda detalların misilsiz qorunmasını təmin edir'
@@ -90,7 +91,7 @@ const translations: Translations = {
     about: {
       tag: 'Şirkət haqqında',
       title: 'Avtokimya dünyasında\nsizin etibarlı tərəfdaşınız',
-      desc1: 'MasloGuru sadəcə bir mağaza deyil, öz işinə sadiq peшəkarlar komandasıdır. Biz inanırıq ki, avtomobilin düzgün saxlanılması keyfiyyətli sərfiyyat materiallarından başlayır.',
+      desc1: 'MasloGuru sadəcə bir mağaza deyil, öz işinə sadiq peşəkarlar komandasıdır. Biz inanırıq ki, avtomobilin düzgün saxlanılması keyfiyyətli sərfiyyat materiallarından başlayır.',
       desc2: 'Missiyamız avtomobil sahiblərinə orijinal və yüksək keyfiyyətli mühərrik yağlarına çıxış təmin etmək, saxtakarlıq riskini aradan qaldırmaq və hər bir mühərrikin uzun ömürlü olmasını təmin etməkdir.',
       stats: {
         s1: '10+ il bazarda',
@@ -98,7 +99,7 @@ const translations: Translations = {
         s2: '15,000+ müştəri',
         s2d: 'Bizə etibar edirlər',
         s3: 'Yalnız orijinal',
-        s3d: 'Birбаşa işləyirik',
+        s3d: 'Birbaşa işləyirik',
         s4: '2 saata çatdırılma',
         s4d: 'Öz logistikamız',
       },
@@ -106,7 +107,7 @@ const translations: Translations = {
     },
     contact: {
       title: 'Sualınız qaldı?\nBiz əlaqədəyik!',
-      desc: 'Yağ seçimi və ya mövcudluq barədə məsləҳət lazımdır? Müraciət qoyun, 15 dəqiqə ərzində sizə zəng edək.',
+      desc: 'Yağ seçimi və ya mövcudluq barədə məsləhət lazımdır? Müraciət qoyun, 15 dəqiqə ərzində sizə zəng edək.',
       phone: 'Telefon',
       email: 'Email',
       office: 'Ofis',
@@ -129,6 +130,7 @@ const translations: Translations = {
   RU: {
     nav: {
       collection: 'Коллекция',
+      catalog: 'Каталог',
       intelligence: 'Интеллект',
       history: 'История',
       concierge: 'Консьерж',
@@ -243,6 +245,7 @@ const translations: Translations = {
   EN: {
     nav: {
       collection: 'Collection',
+      catalog: 'Catalog',
       intelligence: 'Intelligence',
       history: 'History',
       concierge: 'Concierge',
