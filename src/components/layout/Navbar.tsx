@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -38,9 +37,9 @@ export const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group shrink-0">
           <div className="p-1.5 bg-primary rounded-lg group-hover:bg-accent transition-colors">
-            <Droplets className="w-6 h-6 text-white group-hover:text-primary transition-colors" />
+            <Droplets className="w-6 h-6 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-tight font-headline">Масло<span className="text-accent">Гуру</span></span>
+          <span className="text-xl font-bold tracking-tight font-headline text-foreground">Масло<span className="text-primary">Гуру</span></span>
         </Link>
 
         {/* Desktop Nav - Centered */}
@@ -49,7 +48,7 @@ export const Navbar = () => {
             <Link 
               key={link.name} 
               href={link.href} 
-              className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors whitespace-nowrap"
+              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors whitespace-nowrap"
             >
               {link.name}
             </Link>
@@ -58,7 +57,7 @@ export const Navbar = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center shrink-0">
-          <Button variant="outline" className="border-accent text-accent hover:bg-accent/10" asChild>
+          <Button variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
             <Link href="#contact">Консультация</Link>
           </Button>
         </div>
@@ -79,7 +78,7 @@ export const Navbar = () => {
                       key={link.name} 
                       href={link.href} 
                       onClick={() => setIsOpen(false)}
-                      className="text-lg font-medium hover:text-accent transition-colors"
+                      className="text-lg font-medium hover:text-primary transition-colors"
                     >
                       {link.name}
                     </Link>
