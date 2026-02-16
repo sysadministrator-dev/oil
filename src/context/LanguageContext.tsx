@@ -82,7 +82,7 @@ const translations: Translations = {
           desc: 'Minik avtomobilləri üçün ağır iş şəraitində istifadə olunan sintetik aşağı özlülüklü mühərrik yağı. Sintetik komponentlər və onlara uyğunlaşdırılmış ən yeni qatqı kompleksi cari praktiki tələblərə cavab verir. Alpine RSL 5W-30 GM mühərrik yağlarının əhəmiyyətli dərəcədə yaxşılaşdırılmış keyfiyyəti aşınmadan qorunmanın və mühərrik təmizliyinin daha da artırılması ilə bağlıdır. Soyuq şəraitdə aşağı özlülük və yüksək temperaturda lazımi özlülük sayəsində yüksək yanacaq qənaəti potensialı təmin edilir.',
           benefits: [
             'Alpine RSL 5W-30 GM tələbkar mühərriklər üçün yüksək məhsuldarlıqlı mühərrik yağıdır.',
-            'Minik avtomobillərinin benzin və dizel mühərrikləri, o cümlədən turboşarjlı və birbaşa püskürtməli mühərriklər üçün istənilən iş şəraitində tövsiyə olunur.'
+            'Minik avtomobillərinin benzin və dizel mühərrikləri, o cümlədən turboşarjlı və birbaxa püskürtməli mühərriklər üçün istənilən iş şəraitində tövsiyə olunur.'
           ],
         },
       }
@@ -103,6 +103,15 @@ const translations: Translations = {
         s4d: 'Öz logistikamız',
       },
       feedback: 'Daimi müştərilərimizdən 99.8% müsbət rəy',
+      missionTitle: 'Missiyamız',
+      missionDesc: 'Hər bir mühərrikin mütləq qorunmasını və uzunömürlülüyünü təmin etmək üçün ən son texnologiyaları və orijinal məhsulları əlçatan edirik.',
+      valuesTitle: 'Dəyərlərimiz',
+      value1: 'Keyfiyyət',
+      value1Desc: 'Yalnız sertifikatlaşdırılmış orijinal məhsullar.',
+      value2: 'Ekspertiza',
+      value2Desc: 'Mühərrik yağları sahəsində dərin biliklər.',
+      value3: 'İnnovasiya',
+      value3Desc: 'Daimi inkişaf və yeni texnologiyaların tətbiqi.',
     },
     contact: {
       title: 'Sualınız qaldı?\nBiz əlaqədəyik!',
@@ -217,6 +226,15 @@ const translations: Translations = {
         s4d: 'Собственная логистика',
       },
       feedback: 'Положительных отзывов от наших постоянных покупателей',
+      missionTitle: 'Наша Миссия',
+      missionDesc: 'Мы стремимся к тому, чтобы каждый двигатель работал на пике своих возможностей, используя только лучшие технологические решения и оригинальную продукцию.',
+      valuesTitle: 'Наши Ценности',
+      value1: 'Качество',
+      value1Desc: 'Бескомпромиссный выбор только оригинальной и сертифицированной продукции.',
+      value2: 'Экспертиза',
+      value2Desc: 'Глубокие знания технических характеристик и индивидуальный подход к каждому авто.',
+      value3: 'Инновации',
+      value3Desc: 'Постоянное обновление ассортимента в соответствии с требованиями современных двигателей.',
     },
     contact: {
       title: 'Остались вопросы?\nМы на связи!',
@@ -331,6 +349,15 @@ const translations: Translations = {
         s4d: 'Own logistics',
       },
       feedback: 'Positive feedback from our regular customers',
+      missionTitle: 'Our Mission',
+      missionDesc: 'We strive to ensure that every engine operates at its peak performance by providing access to the best technological solutions and original products.',
+      valuesTitle: 'Our Values',
+      value1: 'Quality',
+      value1Desc: 'Uncompromising selection of only original and certified products.',
+      value2: 'Expertise',
+      value2Desc: 'Deep technical knowledge and an individual approach to every vehicle.',
+      value3: 'Innovation',
+      value3Desc: 'Constant assortment updates to meet the requirements of modern engines.',
     },
     contact: {
       title: 'Any Questions?\nWe are here!',
