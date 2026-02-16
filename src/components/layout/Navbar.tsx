@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Droplets, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -23,26 +24,31 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent py-4">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 group shrink-0">
           <div className="p-1.5 bg-primary rounded-lg group-hover:bg-accent transition-colors">
             <Droplets className="w-6 h-6 text-white group-hover:text-primary transition-colors" />
           </div>
           <span className="text-xl font-bold tracking-tight font-headline">Масло<span className="text-accent">Гуру</span></span>
         </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Nav - Centered */}
+        <div className="hidden md:flex items-center justify-center gap-8 flex-1 px-8">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               href={link.href} 
-              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
+              className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors whitespace-nowrap"
             >
               {link.name}
             </Link>
           ))}
+        </div>
+
+        {/* Desktop CTA */}
+        <div className="hidden md:flex items-center shrink-0">
           <Button variant="default" className="bg-primary hover:bg-primary/80" asChild>
             <Link href="#contact">Заказать звонок</Link>
           </Button>

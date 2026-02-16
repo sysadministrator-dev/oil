@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -11,7 +12,7 @@ export const Hero = () => {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         {heroImage && (
@@ -19,46 +20,46 @@ export const Hero = () => {
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover opacity-30 grayscale-[50%]"
+            className="object-cover opacity-40 grayscale-[20%]"
             priority
             data-ai-hint={heroImage.imageHint}
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold font-headline mb-6 leading-tight">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+          <h1 className="text-5xl md:text-8xl font-bold font-headline mb-8 leading-tight">
             Профессиональная защита <br />
             <span className="gradient-text">вашего двигателя</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             Поставляем только сертифицированные моторные масла от ведущих мировых брендов. 
             Гарантия качества, профессиональный подбор и быстрая доставка.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8" asChild>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-10 h-14 text-lg" asChild>
               <Link href="#products">Выбрать масло</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 px-8" asChild>
+            <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 px-10 h-14 text-lg" asChild>
               <Link href="#selector">Подобрать с ИИ</Link>
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10">
-            <div className="flex items-center gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-white/10 max-w-3xl mx-auto">
+            <div className="flex items-center justify-center gap-3">
               <ShieldCheck className="w-6 h-6 text-accent" />
-              <span className="text-sm font-medium">100% Оригинал</span>
+              <span className="text-base font-medium">100% Оригинал</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3">
               <Zap className="w-6 h-6 text-accent" />
-              <span className="text-sm font-medium">Быстрая доставка</span>
+              <span className="text-base font-medium">Быстрая доставка</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3">
               <Award className="w-6 h-6 text-accent" />
-              <span className="text-sm font-medium">Лучшие бренды</span>
+              <span className="text-base font-medium">Лучшие бренды</span>
             </div>
           </div>
         </div>
