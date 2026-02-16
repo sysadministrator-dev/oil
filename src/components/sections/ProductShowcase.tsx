@@ -18,8 +18,8 @@ interface Product {
 
 const productIds: Product[] = [
   { id: '1', imageId: 'oil-synthetic-5w30', spec: 'SAE 5W-30' },
-  { id: '2', imageId: 'oil-synthetic-0w20', spec: 'SAE 0W-20' },
-  { id: '3', imageId: 'oil-semi-10w40', spec: 'SAE 10W-40' },
+  { id: '2', imageId: 'oil-synthetic-0w20', spec: 'SAE 5W-30' },
+  { id: '3', imageId: 'oil-toptec-4200', spec: 'SAE 5W-30' },
   { id: '4', imageId: 'oil-diesel-15w40', spec: 'SAE 15W-40' },
 ];
 

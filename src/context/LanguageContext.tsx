@@ -43,7 +43,7 @@ const translations: Translations = {
             'Dizel mühərriklərinin qurum filtrlərində hissəciklərin yığılmasını azaltmağa kömək edir',
             'Benzin mühərriklərinin katalitik neytrallaşdırıcılarının "zəhərlənməsini" azaltmağa kömək edir',
             'Çöküntü və şlamın əmələ gəlməsini azaldır, mühərrikin uzun ömürlü olmasını və təmizliyini təmin edir',
-            'Yağın köhnəlmə prosesini yavaşlatmağa kömək edir, yağdəyişmə intervalı artırıldıqda mühərrikin qorunmasını təmin edir',
+            'Yağın köhnəlmə prosesini yavaşlatmağa kömək edir, yağdəyiшmə intervalı artırıldıqda mühərrikin qorunmasını təmin edir',
             'Ətraf mühitin karbohidrogenlərlə çirklənməsini azaldır',
             'Yanacaq qənaətinə kömək edir',
             'Soyuq havada sürətli işə düşmə və anında qorunma mühərrikin xidmət müddətini uzatmağa kömək edir'
@@ -52,20 +52,27 @@ const translations: Translations = {
         '2': {
           name: 'Castrol EDGE 5W-30 C3',
           type: 'TITANIUM FST™ Texnologiyası',
-          desc: 'Tam sintetik mühərrik yağı, titan birləşmələri sayəsində yağ təbəqəsinə əlavə davamlılıq verən ən son TITANIUM FST™ texnologiyasından istifadə edilməklə istehsal edilmişdir. TITANIUM FST™ ekstremal yüklər şəraitində yağın davranışını kökündən dəyişdirərək əlavə zərbə uducu qat yaradır. Sınaqlar təsdiq etdi ki, TITANIUM FST™ təbəqənin möhkəmliyini 2 dəfə artırır, onun qırılmasının qarşısını alır və mühərrikin maksimum məhsuldarlığı üçün sürtünməni azaldır.',
+          desc: 'Tam sintetik mühərrik yağı, titan birləşmələri sayəsində yağ təbəqəsinə əlavə davamlılıq verən ən son TITANIUM FST™ texnologiyasından istifadə edilməklə istehsal edilmişdir. TITANIUM FST™ ekstremal yüklər şəraitində yağın davranışını kökündən dəyiшdirərək əlavə zərbə uducu qat yaradır. Sınaqlar təsdiq etdi ki, TITANIUM FST™ təbəqənin möhkəmliyini 2 dəfə artırır, onun qırılmasının qarşısını alır və mühərrikin maksimum məhsuldarlığı üçün sürtünməni azaldır.',
           benefits: [
             'Həm qısa, həm də uzunmüddətli dövrdə mühərrikin maksimum səmərəliliyini təmin edir',
-            'Çöküntülərin yaranmasını qarşısını alır, mühərrikin akselerator pedalına reaksiya sürətini artırmağa kömək edir',
+            'Çöküntülərin yaranmasını qarшısını alır, mühərrikin akselerator pedalına reaksiya sürətini artırmağa kömək edir',
             'Hətta yüksək yüklər şəraitində mühərrikin maksimum gücünü saxlayır',
             'Mühərrikin FİƏ-ni artırır (müstəqil sınaqlarla təsdiqlənib)',
             'Müxtəlif hərəkət şəraitində və geniş temperatur diapazonunda detalların misilsiz qorunmasını təmin edir'
           ],
         },
         '3': {
-          name: 'CLASSIC PRO',
-          type: 'Yüksək Performanslı Qarışıq',
-          desc: 'Zamanla sınaqdan keçmiş etibarlılıq. Klassik ənənələr və müasir qatqılar arasında mükəmməl balans.',
-          benefits: ['Mühərrik səsini azaltma', 'Dəm qatının təmizlənməsi', 'Oksidləşmədən qorunma'],
+          name: 'Top Tec 4200 5W-30',
+          type: 'HC-Sintetik Mid SAPS',
+          desc: 'İkili işlənmiş qazların neytrallaşdırılması sistemi (o cümlədən DPF) ilə təchiz edilmiş minik avtomobilləri üçün HC-sintetik az küllü (Mid SAPS) mühərrik yağı. EURO 4 və daha yüksək ekoloji standartlara uyğundur.',
+          benefits: [
+            'Dizel mühərrikləri, qurum filtrləri və turbinlər üçün tövsiyə olunur',
+            'Mühərrik təmizliyini təmin edir',
+            'Mühərrik detallarına sürətli yağ ötürülməsi',
+            'İstənilən dövrlərdə optimal təzyiq',
+            'Aşağı və yüksək temperaturlarda etibarlı yağlama',
+            'Yanacaq sərfiyyatının və zərərli tullantıların azaldılması'
+          ],
         },
         '4': {
           name: 'TRUCK HD',
@@ -187,14 +194,21 @@ const translations: Translations = {
           ],
         },
         '3': {
-          name: 'CLASSIC PRO',
-          type: 'High Performance Blend',
-          desc: 'Надежность проверенная временем. Идеальный баланс между классическими традициями и современными присадками.',
-          benefits: ['Снижение шума двигателя', 'Удаление нагара', 'Защита от окисления'],
+          name: 'Top Tec 4200 5W-30',
+          type: 'HC-синтетическое Mid SAPS',
+          desc: 'HC-синтетическое малозольное (Mid SAPS) моторное масло для легковых автомобилей, оснащенных двойной системой нейтрализации отработавших газов (в том числе DPF). Cоответствует экологическим нормам EURO 4 и выше.',
+          benefits: [
+            'Рекомендовано к применению на дизельных двигателях оснащенных сажевыми фильтрами и турбинами;',
+            'Обеспечивает чистоту двигателя;',
+            'Максимально быстрое поступление по масляной магистрали к деталям двигателя;',
+            'Оптимальное давление на любых оборотах двигателя;',
+            'Надежная смазка при низких и высоких температурах;',
+            'Снижение расхода топлива и вредных компонентов выхлопа.'
+          ],
         },
         '4': {
           name: 'TRUCK HD',
-          type: 'Heavy Duty Power',
+          type: 'High Performance Blend',
           desc: 'Мощь и выносливость для коммерческой техники. Работает там, где другие сдаются.',
           benefits: ['Для сверхвысоких нагрузок', 'Контроль вязкости', 'Защита от коррозии'],
         },
@@ -312,10 +326,17 @@ const translations: Translations = {
           ],
         },
         '3': {
-          name: 'CLASSIC PRO',
-          type: 'High Performance Blend',
-          desc: 'Time-tested reliability. The perfect balance between classic traditions and modern additives.',
-          benefits: ['Engine noise reduction', 'Carbon deposit removal', 'Oxidation protection'],
+          name: 'Top Tec 4200 5W-30',
+          type: 'HC-Synthetic Mid SAPS',
+          desc: 'HC-synthetic low-ash (Mid SAPS) engine oil for passenger cars equipped with a double exhaust gas neutralization system (including DPF). Complies with EURO 4 environmental standards and above.',
+          benefits: [
+            'Recommended for diesel engines with particulate filters and turbochargers',
+            'Ensures engine cleanliness',
+            'Rapid oil delivery to engine components',
+            'Optimal pressure at all engine speeds',
+            'Reliable lubrication at low and high temperatures',
+            'Reduced fuel consumption and emissions'
+          ],
         },
         '4': {
           name: 'TRUCK HD',
