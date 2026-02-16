@@ -1,14 +1,11 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  output: "export",
+  basePath: "/oil",
+  assetPrefix: "/oil/",
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -60,9 +57,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  experimental: {
-    // allowedDevOrigins removed as it causes TS errors in Next.js 15 and is often handled by the environment
-  } as any,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
