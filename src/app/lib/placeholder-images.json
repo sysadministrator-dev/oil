@@ -1,0 +1,41 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Premium car engine with glowing oil flows",
+      "imageUrl": "https://picsum.photos/seed/oil-hero/1920/1080",
+      "imageHint": "engine oil"
+    },
+    {
+      "id": "oil-synthetic-5w30",
+      "description": "Full synthetic 5W-30 engine oil bottle",
+      "imageUrl": "https://picsum.photos/seed/oil1/600/800",
+      "imageHint": "motor oil"
+    },
+    {
+      "id": "oil-synthetic-0w20",
+      "description": "Full synthetic 0W-20 engine oil bottle",
+      "imageUrl": "https://picsum.photos/seed/oil2/600/800",
+      "imageHint": "engine lubricant"
+    },
+    {
+      "id": "oil-semi-10w40",
+      "description": "Semi-synthetic 10W-40 engine oil bottle",
+      "imageUrl": "https://picsum.photos/seed/oil3/600/800",
+      "imageHint": "car oil"
+    },
+    {
+      "id": "oil-diesel-15w40",
+      "description": "Heavy duty diesel engine oil",
+      "imageUrl": "https://picsum.photos/seed/oil4/600/800",
+      "imageHint": "diesel lubricant"
+    },
+    {
+      "id": "about-team",
+      "description": "Professional auto mechanics team",
+      "imageUrl": "https://picsum.photos/seed/team/800/600",
+      "imageHint": "auto mechanic"
+    }
+  ]
+}
