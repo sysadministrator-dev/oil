@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -85,7 +84,7 @@ export const AboutUs = () => {
           <div className="max-w-4xl mx-auto text-center mb-12 md:mb-20">
             <h2 className="text-3xl md:text-5xl font-black mb-6 md:mb-8 uppercase tracking-tighter">{t('about.missionTitle')}</h2>
             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium italic">
-              "{t('about.missionDesc')}"
+              &quot;{t('about.missionDesc')}&quot;
             </p>
           </div>
 

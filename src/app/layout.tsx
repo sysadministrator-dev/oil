@@ -1,8 +1,14 @@
-
 import type {Metadata} from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { Toaster } from '@/components/ui/toaster';
+
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: 'МаслоГуру | Премиальные моторные масла и AI-подбор',
@@ -15,12 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="ru" className={inter.variable}>
       <body className="font-body antialiased">
         <LanguageProvider>
           {children}
