@@ -57,7 +57,7 @@ export const ProductShowcase = () => {
                           src={imageData.imageUrl}
                           alt={product.name}
                           fill
-                          className="object-cover transition-transform duration-1000 group-hover:scale-110 grayscale hover:grayscale-0"
+                          className="object-cover transition-all duration-1000 grayscale group-hover:grayscale-0 group-hover:scale-105"
                         />
                       )}
                       <div className="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/20 transition-all duration-700 flex items-center justify-center">
